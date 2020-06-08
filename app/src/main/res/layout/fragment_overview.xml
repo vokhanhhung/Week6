@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:background="#373434">
+
+
+        <ImageView
+            android:id="@+id/avatarMovie"
+            android:layout_width="216dp"
+            android:layout_height="215dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@id/cardview"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+
+        <Button
+            android:id="@+id/watch_now"
+            android:layout_width="72dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#3F51B5"
+            android:text="Watch now"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/avatarMovie"
+            app:layout_constraintStart_toEndOf="@id/trailer"
+            app:layout_constraintTop_toBottomOf="@id/avatarMovie" />
+
+        <Button
+            android:id="@+id/doawnload"
+            android:layout_width="72dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#8BC34A"
+            android:text="Download"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/trailer"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf=" @id/avatarMovie"
+            app:layout_constraintTop_toBottomOf="@id/avatarMovie" />
+
+        <Button
+            android:id="@+id/trailer"
+            android:layout_width="72dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:background="#2196F3"
+            android:text="Trailer"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/watch_now"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/doawnload"
+            app:layout_constraintTop_toBottomOf="@id/avatarMovie" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="0dp"
+            android:layout_height="215dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/avatarMovie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatarMovie"
+            app:layout_constraintTop_toTopOf="@id/avatarMovie"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#3A3A3A">
+
+                <TextView
+                    android:id="@+id/vote_average"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:background="#CDDC39"
+                    android:gravity="center_horizontal"
+                    android:text="6.8"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/popularity"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_horizontal"
+                    android:text="19572 views"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintLeft_toLeftOf="@id/vote_average"
+                    app:layout_constraintRight_toRightOf="@id/vote_average"
+                    app:layout_constraintTop_toBottomOf="@id/vote_average" />
+
+                <TextView
+                    android:id="@+id/vote_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_horizontal"
+                    android:text="3250 votes"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintLeft_toLeftOf="@id/popularity"
+                    app:layout_constraintRight_toRightOf="@id/popularity"
+                    app:layout_constraintTop_toBottomOf="@id/popularity" />
+
+
+                <TextView
+                    android:id="@+id/adult"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_horizontal"
+                    android:text="Adult: No"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/vote_count"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vote_count" />
+
+
+                <TextView
+                    android:id="@+id/language"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_horizontal"
+                    android:text="Language : US"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintLeft_toLeftOf="@id/adult"
+                    app:layout_constraintRight_toRightOf="@id/adult"
+                    app:layout_constraintTop_toBottomOf="@id/adult" />
+
+                <TextView
+                    android:id="@+id/release_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center_horizontal"
+                    android:text="25/04/2020"
+                    android:textAlignment="center"
+                    android:textColor="#00BCD4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/language"
+                    app:layout_constraintRight_toRightOf="@id/language"
+                    app:layout_constraintTop_toBottomOf="@id/language"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/release_date" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/nameMovie"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_horizontal"
+            android:text="Sonic the Hedgehog"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            app:layout_constraintLeft_toLeftOf="@id/avatarMovie"
+            app:layout_constraintRight_toRightOf="@id/cardview"
+            app:layout_constraintTop_toBottomOf="@id/watch_now" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_geners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="@id/cardview"
+            app:layout_constraintStart_toStartOf="@id/avatarMovie"
+            app:layout_constraintTop_toBottomOf="@id/nameMovie" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview_geners" />
+
+        <TextView
+            android:id="@+id/laberOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/avatarMovie"
+            app:layout_constraintRight_toRightOf="@id/cardview"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="After he and his wife are murdered, marine Ray Garrison is resurrected by a team of scientists. Enhanced with nanotechnology, he becomes a superhuman, biotech killing machine—'Bloodshot'. As Ray first trains with fellow super-soldiers, he cannot recall anything from his former life. But when his memories flood back and he remembers the man that killed both him and his wife, he breaks out of the facility to get revenge, only to discover that there's more to the conspiracy than he thought."
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/avatarMovie"
+            app:layout_constraintRight_toRightOf="@id/cardview"
+            app:layout_constraintTop_toBottomOf="@id/laberOverview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
